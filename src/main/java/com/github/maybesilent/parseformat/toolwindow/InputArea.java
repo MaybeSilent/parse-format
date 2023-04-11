@@ -2,7 +2,9 @@ package com.github.maybesilent.parseformat.toolwindow;
 
 import com.intellij.ui.components.JBTextArea;
 
-import javax.swing.*;
+import javax.swing.AbstractAction;
+import javax.swing.InputMap;
+import javax.swing.KeyStroke;
 import java.awt.event.ActionEvent;
 
 public class InputArea extends JBTextArea {
