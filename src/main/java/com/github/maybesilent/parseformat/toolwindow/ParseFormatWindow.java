@@ -39,14 +39,14 @@ public class ParseFormatWindow {
         contentPanel.add(formatArea.getScrollPane(), BorderLayout.CENTER);
 
         enterArea = new JBScrollPane();
-        enterArea.setPreferredSize(new Dimension(-1, 60));
+        enterArea.setPreferredSize(new Dimension(-1, 80));
         enterArea.setBorder(BorderFactory.createCompoundBorder(
                 BorderFactory.createMatteBorder(0, 0, 0, 0, JBColor.border()),
                 BorderFactory.createEmptyBorder(10, 10, 10, 10)));
         inputArea = new InputArea(() -> {
             String input = inputArea.getText();
             formatArea.setDocument(input);
-        });
+        }, enterArea);
         enterArea.setViewportView(inputArea);
     }
 }
