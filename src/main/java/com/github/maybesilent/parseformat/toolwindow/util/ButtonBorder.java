@@ -1,6 +1,5 @@
 package com.github.maybesilent.parseformat.toolwindow.util;
 
-// https://tips4java.wordpress.com/2009/09/27/component-border/
 
 import com.intellij.util.ui.JBUI;
 
@@ -11,6 +10,10 @@ import java.awt.Cursor;
 import java.awt.Graphics;
 import java.awt.Insets;
 
+/**
+ * https://tips4java.wordpress.com/2009/09/27/component-border/
+ * put button input panel border
+ */
 public class ButtonBorder implements Border {
 
     private final JComponent button;

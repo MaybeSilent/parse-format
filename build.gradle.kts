@@ -54,6 +54,13 @@ kover.xmlReport {
     onCheck.set(true)
 }
 
+dependencies {
+    compileOnly("org.projectlombok:lombok:1.18.26")
+    annotationProcessor("org.projectlombok:lombok:1.18.26")
+    implementation("com.github.vertical-blank:sql-formatter:2.0.3")
+    implementation("com.google.code.gson:gson:2.10.1")
+}
+
 tasks {
     wrapper {
         gradleVersion = properties("gradleVersion").get()

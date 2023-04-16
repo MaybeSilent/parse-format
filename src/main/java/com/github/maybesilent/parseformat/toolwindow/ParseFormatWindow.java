@@ -1,5 +1,7 @@
 package com.github.maybesilent.parseformat.toolwindow;
 
+import com.github.maybesilent.parseformat.formatter.FormatInfo;
+import com.github.maybesilent.parseformat.formatter.Formatter;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.SimpleToolWindowPanel;
 import com.intellij.ui.JBColor;
@@ -45,7 +47,8 @@ public class ParseFormatWindow {
                 BorderFactory.createEmptyBorder(10, 10, 10, 10)));
         inputArea = new InputArea(() -> {
             String input = inputArea.getText();
-            formatArea.setDocument(input);
+            FormatInfo info = Formatter.format(input);
+            formatArea.setDocument(info.getFormatContent());
         }, enterArea);
         enterArea.setViewportView(inputArea);
     }
